@@ -1,0 +1,255 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+    padding: 10px;
+}
+
+/* Navigation Bar */
+nav {
+    background: #ff66b2; /* Soft pink */
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #ff99cc; /* Lighter pink */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+/* Page layout */
+.page {
+    display: none;
+    padding: 20px;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Home header */
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+header h1 {
+    color: #ff66b2;
+    font-size: 2.5em;
+}
+
+/* Categories */
+.categories {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: #ff66b2;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.category-btn:hover {
+    background: #ff99cc;
+}
+
+/* Cake Container */
+.cake-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cake-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cake-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-width: 200PX;
+    margin-bottom: 10px;
+}
+
+.cake-card h3 {
+    color: #ff66b2;
+    margin: 10px 0;
+}
+
+.cake-card p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.cake-card .buyBtn {
+    background: #ff66b2;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cake-card .buyBtn:hover {
+    background: #ff99cc;
+}
+
+/* About & Contact */
+#about, #contact {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#about h2, #contact h2 {
+    color: #ff66b2;
+    margin-bottom: 20px;
+}
+
+#about p, #contact p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Login & Register Forms */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #ff66b2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #ff99cc;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #ff66b2;
+    color: #fff;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .cake-container {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        padding: 0 20px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
